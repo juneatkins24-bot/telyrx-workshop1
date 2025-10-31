@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unwrapping 2026 | TelyRx Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-btn active" data-page="home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-btn" data-page="schedule">
+            <span class="nav-icon">📅</span>
+            <span class="nav-label">Schedule</span>
+        </button>
+        <button class="nav-btn" data-page="profile">
+            <span class="nav-icon">👤</span>
+            <span class="nav-label">Profile</span>
+        </button>
+        <button class="nav-btn" data-page="connect">
+            <span class="nav-icon">☕</span>
+            <span class="nav-label">Connect</span>
+        </button>
+        <button class="nav-btn" data-page="inspo">
+            <span class="nav-icon">💡</span>
+            <span class="nav-label">Inspo</span>
+        </button>
+        <button class="nav-btn" data-page="vibes">
+            <span class="nav-icon">🎵</span>
+            <span class="nav-label">Vibes</span>
+        </button>
+        <button class="nav-btn" data-page="trivia">
+            <span class="nav-icon">🎯</span>
+            <span class="nav-label">Trivia</span>
+        </button>
+        <button class="nav-btn" data-page="memories">
+            <span class="nav-icon">📸</span>
+            <span class="nav-label">Memories</span>
+        </button>
+    </nav>
+
+    <!-- Pages -->
+    <div class="page active" id="home">
+        <div class="hero">
+            <div class="present-animation">
+                <div class="gift-box">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="ribbon-v"></div>
+                    <div class="ribbon-h"></div>
+                    <div class="sparkle sparkle-1">✨</div>
+                    <div class="sparkle sparkle-2">✨</div>
+                    <div class="sparkle sparkle-3">✨</div>
+                </div>
+            </div>
+            <h1 class="hero-title">Unwrapping 2026</h1>
+            <p class="hero-subtitle">TelyRx Marketing Workshop</p>
+            <p class="hero-date">December 3-5, 2025</p>
+        </div>
+
+        <div class="container">
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+
+            <div class="quick-info">
+                <div class="info-card">
+                    <h3>📍 Location</h3>
+                    <p>TelyRx Dallas Pharmacy</p>
+                    <p class="small">8114 Ridgepoint Dr, Ste 214, Irving TX</p>
+                </div>
+                <div class="info-card">
+                    <h3>🏨 Hotel</h3>
+                    <p>NYLO Hotel Las Colinas</p>
+                    <p class="small">1001 West Royal Lane, Irving TX</p>
+                </div>
+                <div class="info-card">
+                    <h3>👥 Team</h3>
+                    <p>15 Amazing Humans</p>
+                    <p class="small">Ready to unwrap 2026 together</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Ready to Get Started?</h2>
+                <p>Check the schedule, set up your profile, and connect with the team!</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="navigateTo('schedule')">View Schedule</button>
+                    <button class="btn btn-secondary" onclick="navigateTo('profile')">Setup Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="schedule">
+        <div class="page-header">
+            <h1>Workshop Schedule</h1>
+            <p>Book your spots and see what's happening</p>
+        </div>
+        <div class="container">
+            <div class="workshops-grid">
+                <!-- Wednesday Workshops -->
+                <div class="workshop-card">
+                    <div class="workshop-header">
+                        <h3>Packaging Your 2026 Brand Story</h3>
+                        <span class="spots-badge">8/12 spots</span>
+                    </div>
+                    <div class="workshop-meta">
+                        <p><strong>Leader:</strong> Holly</p>
+                        <p><strong>Time:</strong> Wednesday, Dec 3 • 10:00 AM - 12:00 PM</p>
+                        <p><strong>Location:</strong> Main Conference Room</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="bookWorkshop(this)">Book Now</button>
+                </div>
+
+                <div class="workshop-card">
+                    <div class="workshop-header">
+                        <h3>Unwrapping Customer Insights</h3>
+                        <span class="spots-badge">5/10 spots</span>
+                    </div>
+                    <div class="workshop-meta">
+                        <p><strong>Leader:</strong> Raf</p>
+                        <p><strong>Time:</strong> Wednesday, Dec 3 • 1:30 PM - 3:30 PM</p>
+                        <p><strong>Location:</strong> Breakout Room A</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="bookWorkshop(this)">Book Now</button>
+                </div>
+
+                <!-- Thursday Workshops -->
+                <div class="workshop-card">
+                    <div class="workshop-header">
+                        <h3>Building Campaigns that Sleigh</h3>
+                        <span class="spots-badge">11/15 spots</span>
+                    </div>
+                    <div class="workshop-meta">
+                        <p><strong>Leader:</strong> Em</p>
+                        <p><strong>Time:</strong> Thursday, Dec 4 • 9:00 AM - 11:30 AM</p>
+                        <p><strong>Location:</strong> Main Conference Room</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="bookWorkshop(this)">Book Now</button>
+                </div>
+
+                <div class="workshop-card">
+                    <div class="workshop-header">
+                        <h3>Social Strategy Wrapped Up</h3>
+                        <span class="spots-badge">7/12 spots</span>
+                    </div>
+                    <div class="workshop-meta">
+                        <p><strong>Leader:</strong> Sidney</p>
+                        <p><strong>Time:</strong> Thursday, Dec 4 • 1:00 PM - 3:00 PM</p>
+                        <p><strong>Location:</strong> Breakout Room B</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="bookWorkshop(this)">Book Now</button>
+                </div>
+
+                <!-- Friday Workshop -->
+                <div class="workshop-card">
+                    <div class="workshop-header">
+                        <h3>Content Planning & Gifting</h3>
+                        <span class="spots-badge">9/15 spots</span>
+                    </div>
+                    <div class="workshop-meta">
+                        <p><strong>Leader:</strong> Vanessa</p>
+                        <p><strong>Time:</strong> Friday, Dec 5 • 9:00 AM - 11:00 AM</p>
+                        <p><strong>Location:</strong> Main Conference Room</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="bookWorkshop(this)">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="profile">
+        <div class="page-header">
+            <h1>Your Profile</h1>
+            <p>Let's get to know you!</p>
+        </div>
+        <div class="container">
+            <div class="profile-form">
+                <div class="profile-photo-section">
+                    <div class="profile-photo-preview" id="photoPreview">
+                        <span class="photo-placeholder">📷</span>
+                    </div>
+                    <label for="photoUpload" class="btn btn-secondary">Upload Photo of You in Your Favorite Place</label>
+                    <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+                </div>
+
+                <div class="form-section">
+                    <h3>About You</h3>
+                    <div class="form-group">
+                        <label>Where are you coming from?</label>
+                        <input type="text" placeholder="City, State">
+                    </div>
+                    <div class="form-group">
+                        <label>What's your role at Tely?</label>
+                        <input type="text" placeholder="Your role">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Fun Questions</h3>
+                    <div class="form-group">
+                        <label>Favorite quote?</label>
+                        <textarea placeholder="Share a quote that inspires you"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Favorite thing you did at work this year?</label>
+                        <textarea placeholder="Tell us about a proud moment"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Describe Tely in 3 words</label>
+                        <input type="text" placeholder="Three words">
+                    </div>
+                    <div class="form-group">
+                        <label>What do you bring to Tely in 3 words?</label>
+                        <input type="text" placeholder="Three words">
+                    </div>
+                    <div class="form-group">
+                        <label>Describe your 2026 vibes</label>
+                        <textarea placeholder="How are you feeling about 2026?"></textarea>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-large">Save Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="connect">
+        <div class="page-header">
+            <h1>Find Your People</h1>
+            <p>Connect with the team</p>
+        </div>
+        <div class="container">
+            <div class="coffee-matcher">
+                <h2>☕ Coffee Matcher</h2>
+                <p>Get paired with someone new for coffee breaks!</p>
+                <button class="btn btn-primary btn-large">Find My Match</button>
+            </div>
+
+            <div class="team-directory">
+                <h2>Team Directory</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Em" style="background: #FFC24C;">
+                        </div>
+                        <h4>Em</h4>
+                        <p>Creative Director</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Raf" style="background: #B4E33D;">
+                        </div>
+                        <h4>Raf</h4>
+                        <p>Data Analyst</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Adam" style="background: #3F612D;">
+                        </div>
+                        <h4>Adam</h4>
+                        <p>Marketing Lead</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Christina" style="background: #EFBCD5;">
+                        </div>
+                        <h4>Christina</h4>
+                        <p>Operations</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Holly" style="background: #1F01B9;">
+                        </div>
+                        <h4>Holly</h4>
+                        <p>Brand Strategist</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Sidney" style="background: #DC471C;">
+                        </div>
+                        <h4>Sidney</h4>
+                        <p>Social Media</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Vanessa" style="background: #3F612D;">
+                        </div>
+                        <h4>Vanessa</h4>
+                        <p>Content Creator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="inspo">
+        <div class="page-header">
+            <h1>Inspo Board</h1>
+            <p>Share ideas and inspiration</p>
+        </div>
+        <div class="container">
+            <div class="upload-section">
+                <button class="btn btn-primary">📤 Upload Image</button>
+                <button class="btn btn-secondary">📝 Add Sticky Note</button>
+            </div>
+            <div class="inspo-grid" id="inspoGrid">
+                <div class="sticky-note" style="background: #B4E33D;">
+                    <p>"What if we made healthcare fun?"</p>
+                    <span class="note-author">- Em</span>
+                </div>
+                <div class="sticky-note" style="background: #EFBCD5;">
+                    <p>"Bold colors = bold ideas"</p>
+                    <span class="note-author">- Raf</span>
+                </div>
+                <div class="sticky-note" style="background: #FFC24C;">
+                    <p>"2026 is our year 🚀"</p>
+                    <span class="note-author">- Sidney</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="vibes">
+        <div class="page-header">
+            <h1>2026 Vibes</h1>
+            <p>Playlist & Dallas Guide</p>
+        </div>
+        <div class="container">
+            <div class="section-card">
+                <h2>🎵 Workshop Playlist</h2>
+                <p>Add your favorite songs that capture your 2026 vibe!</p>
+                <button class="btn btn-primary">Add to Playlist</button>
+                <div class="playlist-preview">
+                    <p>🎶 Current vibe: Upbeat, energetic, ready for growth</p>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2>🏨 NYLO Hotel</h2>
+                <p><strong>1001 West Royal Lane, Irving TX 75039</strong></p>
+                <p>Your home base for the workshop. Check-in Tuesday, check-out Friday.</p>
+                <a href="https://www.google.com/maps/place/1001+West+Royal+Lane,+Irving,+TX+75039" target="_blank" class="btn btn-secondary">View on Google Maps</a>
+            </div>
+
+            <div class="dallas-guide">
+                <h2>🌆 Irving & Las Colinas Guide</h2>
+                <p>Cool spots near the hotel (all within 2-5 miles)</p>
+                
+                <div class="guide-category">
+                    <h3>Entertainment</h3>
+                    <div class="guide-item">
+                        <strong>Toyota Music Factory</strong>
+                        <p>2 miles • Concerts, movies, dining • Live entertainment complex</p>
+                    </div>
+                    <div class="guide-item">
+                        <strong>Mustangs of Las Colinas</strong>
+                        <p>3 miles • Iconic bronze sculpture • Great photo op</p>
+                    </div>
+                    <div class="guide-item">
+                        <strong>Mandalay Canal Walk</strong>
+                        <p>3 miles • Scenic waterfront • Perfect for a stroll</p>
+                    </div>
+                </div>
+
+                <div class="guide-category">
+                    <h3>Restaurants</h3>
+                    <div class="guide-item">
+                        <strong>Hudson House</strong>
+                        <p>American comfort food • Local favorite • Great brunch</p>
+                    </div>
+                    <div class="guide-item">
+                        <strong>The Ranch at Las Colinas</strong>
+                        <p>Texas BBQ • Authentic vibes • Must-try brisket</p>
+                    </div>
+                    <div class="guide-item">
+                        <strong>Mexican Sugar</strong>
+                        <p>Upscale Mexican • Amazing margaritas • Perfect for dinner</p>
+                    </div>
+                </div>
+
+                <div class="guide-category">
+                    <h3>Getting Around</h3>
+                    <div class="guide-item">
+                        <strong>Uber Stipends</strong>
+                        <p>Provided for all Dallas travel during the workshop</p>
+                    </div>
+                    <div class="guide-item">
+                        <strong>Hotel Shuttle</strong>
+                        <p>Check with NYLO for local area shuttle service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="trivia">
+        <div class="page-header">
+            <h1>Tely Trivia</h1>
+            <p>Test your healthcare & marketing knowledge!</p>
+        </div>
+        <div class="container">
+            <div class="trivia-coming-soon">
+                <h2>🎯 Coming Soon!</h2>
+                <p>Get ready for fun trivia rounds covering:</p>
+                <ul>
+                    <li>Healthcare industry knowledge</li>
+                    <li>Marketing trends & tactics</li>
+                    <li>Wellness facts</li>
+                    <li>Tely team trivia</li>
+                </ul>
+                <p class="prize-note">🏆 Prizes for top scorers!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="memories">
+        <div class="page-header">
+            <h1>Workshop Memories</h1>
+            <p>Capture the moments</p>
+        </div>
+        <div class="container">
+            <div class="upload-section">
+                <button class="btn btn-primary">📸 Upload Photo</button>
+            </div>
+            <div class="memories-grid" id="memoriesGrid">
+                <div class="memory-placeholder">
+                    <p>📷</p>
+                    <p>Start capturing memories!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
